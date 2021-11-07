@@ -19,7 +19,6 @@
 <body>
     <div class="container">
         <h1>Calcular Shares por minuto</h1>
-        
         <br>
         <div class="row">
             <input class="col-4" placeholder="Dias" type="number" id="D">
@@ -37,16 +36,14 @@
 <script>
     function Calcular(){
         var D = parseInt(document.getElementById("D").value) || 0
-        document.getElementById("D").value = D
         var H = parseInt(document.getElementById("H").value) || 0
-        document.getElementById("H").value = H
         var M = parseInt(document.getElementById("M").value) || 0
-        document.getElementById("M").value = M
         var S = parseInt(document.getElementById("S").value) || 0
-        document.getElementById("S").value = S
-
         var minutos = (D*24*60) + (H*60) + M
- 
+        document.getElementById("D").value = D
+        document.getElementById("H").value = H
+        document.getElementById("M").value = M
+        document.getElementById("S").value = S
         document.getElementById("Shares").innerHTML =  (S/minutos).toFixed(2) + " shares por minuto"
     }
 </script>
