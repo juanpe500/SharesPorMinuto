@@ -22,10 +22,10 @@
         
         <br>
         <div class="row">
-            <input class="col-4" placeholder="Dias" id="D">
-            <input class="col-4" placeholder="Horas" id="H">
-            <input class="col-4" placeholder="Minutos" id="M">
-            <input class="col-4" placeholder="Shares" id="S">
+            <input class="col-4" placeholder="Dias" type="number" id="D">
+            <input class="col-4" placeholder="Horas" type="number" id="H">
+            <input class="col-4" placeholder="Minutos" type="number" id="M">
+            <input class="col-4" placeholder="Shares" type="number" id="S">
             <button class="col-8" onclick="Calcular()">Calcular</button>
             <p class="col-12"></p>
             <p class="col-1">=</p>
@@ -47,7 +47,7 @@
 
         var minutos = (D*24*60) + (H*60) + M
  
-        document.getElementById("Shares").innerHTML =  (S/minutos)+ " shares por minuto"
+        document.getElementById("Shares").innerHTML =  (S/minutos).toFixed(2) + " shares por minuto"
     }
 </script>
 </html>
